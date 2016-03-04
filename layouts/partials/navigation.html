@@ -1,0 +1,19 @@
+<nav>
+  <div class = "contain">
+  <p class = "title">Ariel Scott</p>
+    <ul>
+      {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{end}}
+    </ul>
+  </div>
+     <!-- <ul>
+      {{ range .Site.Menus.projects }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{end}}
+    </ul> -->
+</nav>

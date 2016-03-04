@@ -1,0 +1,28 @@
+.hover-effects {
+	background:$mhc-black-medium;
+    //padding: 8rem 0 5rem 0;
+	h3 {
+		color:$mhc-turquoise;
+		margin-bottom: 4.75rem;
+	}
+	.img-first {
+		z-index:100;
+		position:relative;
+	}
+
+	.img-second {
+		margin-top: -35%;
+    	z-index:0;
+	}
+	@include break-at(1115) {
+		img {
+			width:100%;
+		}
+	}
+	// @include break-at(680) {
+	// 	padding:6rem 0;
+	// }
+	// @include break-at(460) {
+	// 	padding:5rem 0;
+	// }
+}

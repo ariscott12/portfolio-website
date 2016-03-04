@@ -1,0 +1,197 @@
+.banner {
+	color:$font-color-white;
+	text-align:center;
+	height:646px;
+	padding-top:80px;
+	h1, .h1 {
+		text-transform: uppercase;
+		font-size:4rem;
+		margin-bottom: 2.25rem;
+		letter-spacing: .1rem;
+	}
+	h2,.h2 {
+		font-weight: 400;
+    	font-style: italic;
+    	font-size: 1.35rem;
+		margin-bottom:6.25rem;
+	}
+	.color-pallette {
+		.circle {
+			@include circle(51px);
+			display:inline-block;
+			margin-right:2rem;
+			@include box-shadow(1px, 2px, 3px, rgba(0, 0, 0, 0.3));
+
+			&:last-child {
+				margin-right:0;
+			}
+		}
+	}
+	@include break-at(860) {
+		height:546px;
+		h1, .h1 {
+			font-size:3rem;
+			line-height: 48px;
+		}
+		h2, .h2 {
+			font-size: 1.25rem;
+		}
+	}
+	@include break-at(680) {
+		height:auto;
+		padding-bottom:90px;
+		h1, .h1 {
+			font-size:2.5rem;
+			line-height: 40px;
+		}
+		h2, .h2 {
+			font-size: 1.15rem;
+			margin-bottom:4.25rem;
+		}
+		.color-pallette {
+			.circle {
+				@include circle(31px);
+				margin-right:1rem;
+			}
+		}
+	}
+}
+
+.hands4building {
+	.banner {
+		@include cover-background('../img/banner-imgs/banner-hands-4-building.jpg');
+		li:nth-child(1) {
+			background:$h4b-blue;
+			border:1px solid darken($h4b-blue, 6% );
+		}
+		li:nth-child(2) {
+			background:$h4b-blue-dark;
+			border:1px solid darken($h4b-blue-dark, 6% );
+
+		}
+		li:nth-child(3) {
+			background:$h4b-orange;
+			border:1px solid darken($h4b-orange, 12% );
+		}
+		li:nth-child(4) {
+			background:$h4b-orange-medium;
+			border:1px solid darken($h4b-orange-medium, 12% );
+		}
+		li:nth-child(5) {
+			background:$h4b-orange-light;
+			border:1px solid darken($h4b-orange-light, 12% );
+		}
+		li:nth-child(6) {
+			background:$h4b-black-medium;
+			border:1px solid darken($h4b-black-medium, 6% );
+		}
+		li:nth-child(7) {
+			background:$h4b-gray;
+			border:1px solid darken($h4b-gray, 6% );
+		}
+	}
+}
+
+.mile-high-classics {
+	.banner {
+		@include cover-background('../img/banner-imgs/banner-mile-high-classic.jpg');
+		li:nth-child(1) {
+			background:$mhc-red;
+			border:1px solid darken($mhc-red, 6% );
+		}
+		li:nth-child(2) {
+			background:$mhc-orange;
+			border:1px solid darken($mhc-orange, 6% );
+
+		}
+		li:nth-child(3) {
+			background:$mhc-turquoise;
+			border:1px solid darken($mhc-turquoise, 9% );
+		}
+		li:nth-child(4) {
+			background:$mhc-black;
+			border:1px solid darken($mhc-black, 3% );
+		}
+		li:nth-child(5) {
+			background:$mhc-black-medium;
+			border:1px solid darken($mhc-black-medium, 9% );
+		}
+		li:nth-child(6) {
+			background:$mhc-white;
+			border:1px solid darken($mhc-white, 6% );
+		}
+	}
+}
+
+.music-blocks {
+	.banner {
+		height:546px;
+		background:url('../img/textures/blue-grid-lg.jpg') repeat;
+
+		li:nth-child(1) {
+			background:$mb-turquoise;
+			border:1px solid darken($mb-turquoise, 6% );
+		}
+		li:nth-child(2) {
+			background:$mb-turquoise-dark;
+			border:1px solid darken($mb-turquoise-dark, 6% );
+
+		}
+		li:nth-child(3) {
+			background:$mb-orange;
+			border:1px solid darken($mb-orange, 9% );
+		}
+		li:nth-child(4) {
+			background:$mb-red;
+			border:1px solid darken($mb-red, 3% );
+		}
+		li:nth-child(5) {
+			background:$mb-yellow;
+			border:1px solid darken($mb-yellow, 9% );
+		}
+		li:nth-child(6) {
+			background:$mb-purple;
+			border:1px solid darken($mb-purple, 6% );
+		}
+	}
+	@include break-at(680) {
+		.banner {
+			height:auto;
+		}
+	}
+}
+
+.david-fodel {
+	.banner {
+		background:url('../img/textures/blue-diagonal-gradient.jpg') repeat;
+
+		li:nth-child(1) {
+			background:$df-blue-dark;
+			border:1px solid darken($df-blue-dark, 6% );
+		}
+		li:nth-child(2) {
+			background:$df-blue-light;
+			border:1px solid darken($df-blue-light, 6% );
+
+		}
+		li:nth-child(3) {
+			background:$df-blue-gray;
+			border:1px solid darken($df-blue-gray, 6% );
+		}
+		li:nth-child(4) {
+			background:$df-gray;
+			border:1px solid darken($df-gray, 6% );
+		}
+		li:nth-child(5) {
+			background:$df-white;
+			border:1px solid darken($df-white, 6% );
+		}
+		li:nth-child(6) {
+			background:$df-black-medium;
+			border:1px solid darken($df-black-medium, 6% );
+		}
+		// h2 {
+		// 	color: #3b4866;
+		// }
+	}
+}

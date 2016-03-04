@@ -1,0 +1,46 @@
+.project-grid {
+	a {
+		display:block;
+		float:left;
+		height:460px;
+		background: #999;
+		border:3px solid #eee;
+		text-align: center;
+		color:#fff;
+		text-transform: uppercase;
+		overflow:hidden;
+	}
+	.mile-high-classics {
+		background:#24a39a;
+		width:60%;
+		img {
+			position:relative;
+			top:-3%;
+		}
+	}
+	.hands-4-building {
+		background:#e9ab70;
+		width:40%;
+		img {
+			left:-30%;
+			top:8%;
+			position:relative;
+		}
+	}
+	.music-blocks {
+		width:50%;
+		background:#cf6859;
+	}
+	.david-fodel {
+		width:50%;
+		background:#6b7da9;
+		padding-top:2rem;
+	}
+
+	.experiments {
+		width:66%;
+		background:#999;
+		padding-top:2rem;
+	}
+
+}

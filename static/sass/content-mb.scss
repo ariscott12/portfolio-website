@@ -1,0 +1,57 @@
+.grid-perspective {
+	background:$mb-red;
+}
+
+.control-panel-perspective {
+	background:$mb-orange;
+}
+
+.grid-perspective, .control-panel-perspective {
+	h3, p {
+		color:$font-color-white;
+	}
+}
+
+.tutorial {
+	background:$mb-turquoise;
+	h3, p {
+		color:$font-color-white;
+	}
+}
+
+.macbook-content {
+	padding-bottom:0;
+	margin-bottom: -6rem;
+
+	@include break-at(780) {
+		margin-bottom: -5rem;
+		img {
+			width:100%;
+		}
+	}
+	@include break-at(680) {
+		margin-bottom: -3rem;
+	}
+}
+.intro  {
+	p {
+		font-size: 1.25rem;
+	}
+	img {
+		@include shift(-.5);
+	}
+	@include break-at(1268) {
+		img {
+			@include shift(0);
+			width:100%;
+		}
+	}
+	
+}
+.macbook-banner .img-wrapper {
+	//margin:0;
+	// padding-bottom:0;
+	// margin-top:0;
+	// margin-bottom:0;
+
+}

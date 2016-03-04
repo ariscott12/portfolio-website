@@ -1,0 +1,34 @@
+.lofi-hifi {
+	background:$df-blue-light;
+	//padding-bottom:7rem;
+
+	h3 {
+		color:$font-color-white;
+		margin-bottom:4rem;
+	}
+	.img-second {
+		margin-top:-32%;
+		padding-bottom:2rem;
+	}
+	@include break-at(680) {
+		.img-second {
+			padding-bottom:0;
+		}
+	}
+}
+
+// .david-fodel {
+// 	.screenshots {
+// 		background:#888e9b;
+// 		padding-bottom: 14rem;
+// 		h3 {
+// 			color:$font-color-white;
+// 		}
+// 		img {
+// 			border: 1px solid #7d828e;
+// 		}
+// 	}
+// 	.responsive-views {
+// 		margin-top: -4rem;
+// 	}
+// }

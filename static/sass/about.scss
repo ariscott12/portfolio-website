@@ -1,0 +1,54 @@
+.about-intro {
+	height:400px;
+	background:#ccc;
+}
+.about-me {
+	background:$mb-turquoise;
+	color:#fff;
+	p {
+		font-size:1.5rem;
+		padding:6rem 0;
+		color:$font-color-white;
+		margin-bottom:0;
+	}
+	
+}
+.work-experience {
+	color: $font-color-gray;
+	background: #fff;
+	padding:4rem 0;
+	li:first-child {
+		@include span-columns(5);
+		border-right:1px solid #eee;
+	}
+	li:last-child {
+		@include span-columns(7);
+	}
+	.title {	
+		font-weight: 600;
+    	font-size: 1.45rem;
+	}
+	.company {
+		color:$mb-red;
+		text-transform: uppercase;
+    	font-weight: normal;
+    	font-size:1.25rem;
+    	line-height: 34px;
+    	
+	}
+	.date {
+		//text-transform:uppercase;
+	}
+	ul {
+		padding:20px 0;
+		border-bottom:1px solid #e8e8e8;
+
+		&:last-child {
+			border-bottom:none;
+		}
+		
+	}
+	a {
+		color:$mb-turquoise;
+	}
+}

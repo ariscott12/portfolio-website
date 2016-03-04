@@ -1,0 +1,125 @@
+.responsive-views {
+	margin-bottom:5rem;
+	img {
+		display:block;
+		margin:0 auto;
+	}
+	.slideshow-wrapper {
+		width: 80%;
+    	overflow: hidden;
+    	margin: 0 auto;
+	}
+	.slideshow-inner {
+    	position: relative;
+    	width:300%;
+    	left: 0%;
+    	img {
+			float:left;
+			width:33%;
+		}
+	}
+	@include break-at(800) {
+		.slideshow-wrapper {
+			width:100%;
+		}
+	}
+}
+
+.responsive-view-banner {
+	margin: 5rem 0 6rem 0;
+	padding: 2rem 0;
+	position: relative;
+    z-index: 1000;
+	.contain {
+		position:relative;
+		z-index: 1000;
+	}
+
+	h4 {
+		color:$font-color-white;
+		font-size: 2.25rem;
+    	margin-bottom: 1.5rem;
+    	font-weight: 300;
+
+	}
+	.pagers {
+		li {
+			@include circle(20px);
+			display:inline-block;
+		}
+	}
+
+    &:before {		
+		top: -40px;
+		@extend .skew;
+		@include transform(skewY(1.25deg));
+		z-index:0;
+    }
+
+    &:after {
+		bottom: -30px;
+		@extend .skew;		
+		@include transform(skewY(-1.25deg));
+		z-index:0;
+    }
+    .responsive-banner-left {
+		@include span-columns(2);
+	}
+
+	.responsive-banner-right {
+		@include span-columns(9);
+	}
+	@include break-at(1180) {
+		.responsive-banner-left {
+			@include span-columns(3);
+		}
+	}
+	@include break-at(756) {
+		.responsive-banner-left {
+			display:none;
+		}
+		.responsive-banner-right {
+			@include shift(1);
+			@include span-columns(11);
+		}
+		h4 {
+			font-size:1.75rem;
+		}
+	}
+}
+
+.mile-high-classics {
+	.responsive-view-banner {
+		background:$mhc-orange;
+		&:after, &:before { 
+			background:$mhc-orange;
+		}
+	}
+	.pagers li {
+		background: darken($mhc-orange, 10% );
+	}
+}
+
+.hands4building {
+	.responsive-view-banner {
+		background:$h4b-blue-dark;
+		&:after, &:before { 
+			background:$h4b-blue-dark;
+		}
+	.pagers li {
+			background: darken($h4b-blue-dark, 6% );
+		}
+	}
+}
+
+.david-fodel {
+	.responsive-view-banner {
+		background:$df-blue-light;
+		&:after, &:before { 
+			background:$df-blue-light;
+		}
+	.pagers li {
+			background: darken($df-blue-light, 6% );
+		}
+	}
+}

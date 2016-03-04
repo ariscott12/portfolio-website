@@ -1,0 +1,10 @@
+sftp-config.json
+.DS_Store
+inc/.DS_store
+node_modules
+npm-debug.log
+psds/
+themes/
+mockups
+*.docx
+*.pdf

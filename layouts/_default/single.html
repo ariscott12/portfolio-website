@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{ partial "header.html" . }}
+	</head>
+	<body>
+		<div class = "page-wrapper {{ .Params.id }}" >
+			<header>
+				{{ partial "navigation.html" . }}
+			</header>
+			<div class = "banner" role = "banner">
+				<div class = "contain">
+					<h1>{{title .Title }}</h1>
+					<h2>{{ .Params.projectrole }}</h2>
+					<ul class = "color-pallette">
+						{{ range .Params.colors }}
+						<li class = "circle"></li>
+						{{ end }}
+					</ul>
+				</div>
+			</div>
+			<main>
+				{{ range .Params.section.list }}
+				
+					{{ if eq .padding "false" }}
+					<section class = "{{.class}}">
+					{{ else }}
+					<section class = "{{.class}} section-padding">
+					{{ end }}
+						<div class = "contain">
+							{{ if .title }}
+								<h3>{{.title | markdownify}}</h3>
+							{{end}}
+							{{ if .description }}
+								<p>{{.description | markdownify}}</p>
+							{{end}}
+							<div class = "img-wrapper clearfix">
+								{{ if .img }}
+									<img class = "img-first" src = "/img/{{ .img }}" />
+								{{end}}
+								{{ if .img2 }}
+									<img class = "img-second" src = "/img/{{ .img2 }}" />
+								{{end}}
+								{{ if .img3 }}
+									<img class = "img-third" src = "/img/{{ .img3 }}" />
+								{{end}}
+								{{ if .img4 }}
+									<img class = "img-fourth" src = "/img/{{ .img4 }}" />
+								{{end}}
+							</div>
+						</div>
+					</section>
+				
+				{{end}}
+				{{ if eq .Params.responsive "true" }}
+					<section class = "responsive-views">
+						<div class = "responsive-view-banner">
+							<div class = "contain">
+								<div class = "responsive-banner-left">
+									<img src = "/img/icons/responsive-icon.svg" />
+								</div>
+								<div class = "responsive-banner-right">
+									<h4>Some Responsive Views</h4>
+									<ul class = "pagers">
+										{{ range .Params.responsiveimages }}
+											<li></li>
+										{{ end }}
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class = "contain">
+							<div class = "slideshow-wrapper">
+								<div class = "slideshow-inner">
+								{{ range .Params.responsiveimages }}
+									<img src ="/img/{{ . }}" />
+								{{ end }}
+								</div>
+							</div>
+						</div>
+					</section>
+				{{ end }}
+			</main>
+			{{ partial "footer.html" . }}
+		</div>
+	</body>
+</html>

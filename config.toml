@@ -1,0 +1,75 @@
+baseurl = "arielscott.com"
+languageCode = "en-us"
+title = "Portfolio of Ariel Scott"
+copyright = "&copy; Allegiant. All Rights Reserved." # Copyright notice. This will be displayed in the footer.
+canonifyurls = true
+
+[params]
+    ga_api_key = "Your Google Analytics tracking id" # Google Analytics API key.
+    avatar = "../../img/avatar.jpg" # Image should be square, and roughly 150px x 150px
+    github = "http://github.com/username"
+    twitter = "https://twitter.com/username"
+    linkedin = "https://www.linkedin.com/in/username"
+    footer_1 = "Some text here."
+    footer_2 = "Some different text here."
+    footer_3 = "Even more different text here."
+
+
+
+    [menu]
+    # Shown in the side menu.
+    [[menu.main]]
+        name = "Work"
+        weight = 1
+        identifier = "work"
+        url = "/"
+
+    [[menu.main]]
+        name = "About"
+        weight = 2
+        identifier = "about"
+        url = "/about/"
+    [[menu.main]]
+        name = "Contact"
+        weight = 3
+        url = "/contact/"
+
+    [[menu.projects]]
+        name = "Mile High Classics"
+        weight = 0
+        identifier = "mile-high-classics"
+        url = "/projects/mile-high-classics"
+        image = "/img/music-blocks/grid-all.png"
+        pre = "<img src = '/img/grid/grid-mile-high-classics.png' />"
+
+    [[menu.projects]]
+        name = "Hands 4 Building"
+        weight = 2
+        identifier = "hands-4-building"
+        url = "/projects/hands4building"
+        image = "/img/music-blocks/grid-all.png"
+        pre = "<img src = '/img/grid/grid-hands-4-building.png' />"
+
+    [[menu.projects]]
+        name = "Music Blocks"
+        weight = 3
+        identifier = "music-blocks"
+        url = "/projects/music-blocks"
+        image = "/img/music-blocks/grid-all.png"
+         pre = "<img src = '/img/grid/grid-music-blocks.png' />"
+
+    [[menu.projects]]
+        name = "David Fodel"
+        weight = 4
+        identifier = "david-fodel"
+        url = "/projects/david-fodel"
+        image = "/img/music-blocks/grid-all.png"
+        pre = "<img src = '/img/grid/grid-david-fodel.png' />"
+
+    [[menu.projects]]
+        name = "Some Experiments"
+        weight = 5
+        identifier = "experiments"
+        url = "/projects/david-fodel"
+        image = "/img/music-blocks/grid-all.png"
+        pre = "<img src = '/img/grid/grid-david-fodel.png' />"

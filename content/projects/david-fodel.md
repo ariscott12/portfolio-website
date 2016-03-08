@@ -5,6 +5,7 @@ title = "David Fodel"
 id = "david-fodel"
 projectrole = "Front-End Developer / Web Designer / Content Direction / UX"
 responsive = "true"
+
 colors = [
   "#181e2e",
   "#43464c",
@@ -28,6 +29,7 @@ responsiveimages = [
 	padding = "false"
 
 	[[section.list]]
+
 	class = "lofi-hifi section-padding-perspective screenshots"
 	title = "Lo-Fi to High-Fi"
 	img = "david-fodel/wireframe-perspective.png"
@@ -41,4 +43,4 @@ responsiveimages = [
 
 
 +++
-### The Hsomepage
+

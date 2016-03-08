@@ -48,4 +48,3 @@ responsiveimages = [
 
 
 +++
-### The Hsomepage

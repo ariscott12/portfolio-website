@@ -2,10 +2,9 @@
 date = "2016-03-04T11:43:42-07:00"
 draft = true
 title = "about"
+pagnation = "false"
 type = "about"
-projectrole = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper est sed ultrices auctor. Curabitur et leo ultricies, varius risus sit amet, convallis erat. Proin in lectus a nibh auctor placerat. Proin viverra sapien sed ornare finibus. Nunc auctor sapien at velit pharetra dignissim. Nullam a"
-
-
+info = "asdfasdf asdf"
 [sections]
 [[work.list]]
 title = "Designer/Front-end Developer"

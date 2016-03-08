@@ -9,9 +9,12 @@ colors = [
   "#b60d08",
   "#db6f1d",
   "#018178",
-  "#005852",
   "#1f1f1f",
   "#e6e6e6"
+]
+
+scripts = [
+    "main.js"
 ]
 
 responsiveimages = [
@@ -34,7 +37,7 @@ img = "mile-high-classics/homepage-desktop.jpg"
 padding = "true"
 
 [[section.list]]
-class = "hover-effects section-padding-perspective"
+class = "hover-effects section-padding-perspective screenshots"
 title = "CSS3 Hover Effects"
 img = "mile-high-classics/hover-effect-top-perspective.png"
 img2 = "mile-high-classics/hover-effect-bottom-perspective.png"
@@ -50,4 +53,3 @@ padding = "true"
 
 
 +++
-### The Hsomepage

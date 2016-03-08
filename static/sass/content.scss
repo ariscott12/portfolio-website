@@ -52,14 +52,25 @@ main {
 }
 .screenshots {
 	img {
+		opacity:0;
+		@include transition(.5s all ease-out);
 		margin: 0 auto;
 		text-align:center;
 		display:block;
 		border-radius:5px;
+		&.animate {
+			opacity:1;
+			@include transform(translateX(0%));
+		}
+	}
+	.img-first {
+		@include transform(translateX(-30%));
 	}
 	.img-second {
 		margin-top:7rem;
+		@include transform(translateX(30%));
 	}
+	
 } 
 
 @include break-at(1140) {

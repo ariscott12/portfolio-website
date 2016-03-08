@@ -3,19 +3,52 @@
 		display:block;
 		float:left;
 		height:460px;
-		background: #999;
-		border:3px solid #eee;
+		border:3px solid $offwhite;
 		text-align: center;
-		color:#fff;
-		text-transform: uppercase;
 		overflow:hidden;
+		position:relative;
+		@include transition(all .2s ease-in);
+		img {
+			@include transition(all .2s ease-in);
+		}
+
+		&:hover {
+			h3 {
+				opacity:1;
+				@include transform(scale(1));
+			}
+			img {
+				-webkit-filter: blur(2px);
+				filter: blur(2px);
+			}
+		}
 	}
+	h3 {
+		@include transition(all .2s ease-in);
+		color: $font-color-white;
+		width: 200px;
+		@include center-absolute();
+		@include vertical-align();
+		position: absolute;
+		background: rgba(0,0,0,.5);
+		border: 1px solid $font-color-white;
+		padding: 1em 0;
+		font-weight: 600;
+		font-size: 1.25rem;
+		opacity:0;
+		top:45%;
+		@include transform(scale(.7));
+	}
+	
 	.mile-high-classics {
 		background:#24a39a;
 		width:60%;
 		img {
 			position:relative;
 			top:-3%;
+		}
+		&:hover {
+			background:darken(#24a39a,10%);
 		}
 	}
 	.hands-4-building {
@@ -26,15 +59,25 @@
 			top:8%;
 			position:relative;
 		}
+		&:hover {
+			background:darken(#e9ab70,10%);
+		}
 	}
 	.music-blocks {
 		width:50%;
 		background:#cf6859;
+		&:hover {
+			background:darken(#cf6859,10%);
+		}
 	}
 	.david-fodel {
 		width:50%;
 		background:#6b7da9;
 		padding-top:2rem;
+
+		&:hover {
+			background:darken(#6b7da9,10%);
+		}
 	}
 
 	.experiments {

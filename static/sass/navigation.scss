@@ -1,24 +1,31 @@
-nav {
+.navigation {
 	//display:none;
 	background:#f3f3f3;
+	position:relative;
+	@include transition(all .25s ease-out);
+	z-index:10000;
+	width:100%;
 	ul {
 		float:right;
+	}
+	a {
+		text-decoration: none;
+	    color: #999;
 	}
 
 	li {
 		float:left;
-	}
-	a {
-		color:$font-color-white;
+
+		a {
 		font-weight: 600;
-		text-decoration: none;
-	    color: #999;
 	    font-size: .95rem;
 	    text-transform: uppercase;
 	    padding:24px 18px;
 	    // border-left:1px solid #999;
 	    display:block;
+		}
 	}
+	
 	.title {
 		float: left;
 	    text-transform: uppercase;
@@ -27,5 +34,54 @@ nav {
 	    letter-spacing: .25rem;
 	    font-size: 1.35rem;
 	    padding-top: 19px;
+	}
+	&.fixed {
+		position: fixed;
+		top:-100px;
+		
+		opacity:.9;
+	}
+	&.animate {
+		top:0px;
+		.pagnation {
+			top:0;
+		}
+	}
+}
+
+
+
+.pagnation {
+	@include transition(all .25s ease-out);
+	position:absolute;
+	right:0;
+	top: 70px;
+
+
+	img {
+		width:15px;
+		display:block;
+		//margin-top:.9em;
+	}
+	.prev {
+		// position:absolute;
+		// left:0px;
+		// top:0;
+		// border-right:1px solid #ccc;
+	}
+	.next {
+		// position:absolute;
+		// right:0px;
+		// top:0;
+		
+		// border-left:1px solid #ccc;
+	}
+	.pagnator {
+		float:left;
+		// height:100%;
+		padding: 1.3em 1.75em;
+		background:#eee;
+		border:1px solid #ccc;
+
 	}
 }

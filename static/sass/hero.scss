@@ -1,14 +1,38 @@
 .hero {
-	background:#333;
-	height:1000px;
+	background:#111;
+	height:800px;
 	text-align:center;
+    position:relative;
+    overflow:hidden;
 
 	h1 {
-		color: #555;
-	    font-size: 2.25rem;
-	    text-transform: uppercase;
-	    letter-spacing: .1rem;
-	    font-weight: 500;
-	    padding-top: 100px;
+        color: $font-color-white;
+        font-size: 2.75rem;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        font-weight: bold;
+        border: 7px solid $font-color-white;
+        padding: 2em;
+        @include vertical-align();
+        width:20em;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1000;
+        position:relative;
 	}
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 800px;
+        z-index: 100;
+        background: #000;
+        top: 0;
+        opacity: .2;
+    }
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }

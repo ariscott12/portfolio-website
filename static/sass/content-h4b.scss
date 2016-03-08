@@ -45,9 +45,22 @@
 	}
 	.shoppingcart {
 		background:#ddd;
+		.img-first {
+			@include transform(translateX(0%))
+			opacity:1;
+		}
+		.img-second {
+			@include transform(translateX(-30%))
+		}
+		.img-third {
+			@include transform(translateX(30%))
+		}
 
 		img {
 			border:none;
+			&.animate {
+				@include transform(translateX(0%));
+			}
 		}
 	}
 }

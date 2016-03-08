@@ -1,7 +1,33 @@
 footer {
-	background:#ccc;
+	background:#383838;
 	text-align:center;
-	height:300px;
-	color: #999;
-	padding-top:2rem;
+	padding:3.5rem;
+	p {
+		text-align:left;
+		text-transform: uppercase;
+		color: $font-color-white;
+	}
+}
+.content-left {
+	@include span-columns(8);
+}
+.social-icons {
+	@include span-columns(4);
+	a {
+		width:60px;
+		float:left;
+		display:block;
+		border: 1px solid #292929;
+		border-radius:60px;
+		padding:.7em;
+		margin-right:1em;
+		background:#444;
+
+	}
+	.linked-in {
+		padding:.3em;
+	}
+	img {
+		width:100%;
+	}
 }

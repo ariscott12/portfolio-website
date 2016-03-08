@@ -46,6 +46,8 @@
 		li {
 			@include circle(20px);
 			display:inline-block;
+			cursor:pointer;
+			margin-right:.5rem;
 		}
 	}
 
@@ -97,6 +99,10 @@
 	}
 	.pagers li {
 		background: darken($mhc-orange, 10% );
+
+		&.selected {
+			background: lighten($mhc-orange, 20% );		
+		}
 	}
 }
 
@@ -106,8 +112,11 @@
 		&:after, &:before { 
 			background:$h4b-blue-dark;
 		}
-	.pagers li {
+		.pagers li {
 			background: darken($h4b-blue-dark, 6% );
+			&.selected {
+				background: lighten($h4b-blue-dark, 20% );		
+			}
 		}
 	}
 }

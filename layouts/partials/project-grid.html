@@ -1,0 +1,8 @@
+<section class = "project-grid">
+    {{ range .Site.Menus.projects }}
+    <a class = "{{ .Identifier }}" href="{{ .URL }}">
+        {{ .Pre }}
+        <h3>View Project</h3>
+    </a>
+    {{end}}
+</section>

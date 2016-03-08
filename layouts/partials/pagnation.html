@@ -1,0 +1,16 @@
+{{ if or (.Prev) (.Next) }}
+    {{ if .PrevInSection }}
+    <div class = "prev pagnator">
+      <a href="{{ .PrevInSection.Permalink }}"><img src = "/img/icons/left-arrow.png" /></a>
+    </div>
+    {{ end }}
+ 
+  
+    {{ if .NextInSection }}
+     <div class = "next pagnator">
+      <a href="{{ .NextInSection.Permalink }}"><img src = "/img/icons/right-arrow.png" /></a>
+    </div>
+    {{ end }}
+{{ end }}
+
+

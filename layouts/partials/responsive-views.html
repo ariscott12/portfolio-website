@@ -1,0 +1,26 @@
+<section class = "responsive-views">
+	<div class = "responsive-view-banner">
+		<div class = "contain">
+			<div class = "responsive-banner-left">
+				<img src = "/img/icons/responsive-icon.svg" />
+			</div>
+			<div class = "responsive-banner-right">
+				<h4>Some Responsive Views</h4>
+				<ul class = "pagers">
+					{{ range .Params.responsiveimages }}
+					<li></li>
+					{{ end }}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class = "contain">
+		<div class = "slideshow-wrapper">
+			<div class = "slideshow-inner">
+				{{ range .Params.responsiveimages }}
+				<img src ="/img/{{ . }}" />
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</section>

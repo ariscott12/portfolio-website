@@ -1,38 +1,28 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		{{ partial "header.html" . }}
-	</head>
-	<body>
-		<div class = "about page-wrapper">
-			<header>
-				{{ partial "navigation.html" . }}
-			</header>
-			<main>
-			<section class = "about-intro">
-				
-			</section>
-			<section class = "about-me">
-				<div class = "contain">
-					<p>{{ .Params.projectrole }}</p>
-				</div>
-			</section>
-			<section class = "work-experience">
-				<div class = "contain">
-				
-				{{ range .Params.work.list }}
-				<ul class = "clearfix">
-					
-					<li><div class = "company">{{.company}}</div><div class = "date">{{.date}}</div></li>
-					<li><div class = "title">{{.title}}</div><div class = "link"><a href = "" >{{.link}}</a></div></li>
-						
-					
-				</ul>
-				{{end}}
-				
-				</div>
-			</section>
-			</main>
-		</div>
-	</body>
+    <head>
+        {{ partial "header.html" . }}
+    </head>
+    <body>
+     <div class="m-scene" id = "main">
+        <header>
+            {{ partial "navigation.html" . }}
+        </header>
+        <div class="m-aside scene_element scene_element--fadein">
+            {{ partial "banner.html" . }}
+        </div>
+        <div class="m-right-panel m-page scene_element scene_element--fadeinright">
+            <main class = "clearfix">
+                <section class = "about-me">
+                    <div class = "contain">
+                        <p>
+                            {{ .Params.info }}
+                        </p>
+                    </div>
+                </section>
+               	{{ partial "experience.html" . }}
+            </main>
+        </div>
+      </div>
+    </body>
 </html>

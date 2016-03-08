@@ -1,19 +1,21 @@
-<nav>
+<nav class = "navigation">
   <div class = "contain">
-  <p class = "title">Ariel Scott</p>
+    <p class = "title"><a href = "/" >Ariel Scott</a></p>
     <ul>
-      {{ range .Site.Menus.main }}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+      {{ if .IsHome }}
+          <li class = "work"><a href="/#work/">Work</a></li>
+      {{ else }}
+          <li><a href="/work/">Work</a></li>
       {{end}}
+      <li><a href="/about/">About</a></li>
+      <li><a href="/#contact/">Contact</a></li>
     </ul>
   </div>
-     <!-- <ul>
-      {{ range .Site.Menus.projects }}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
-      {{end}}
-    </ul> -->
+  {{ if eq .Type "projects" }}
+    <div class = "pagnation">
+      {{ partial "pagnation.html" . }}
+    </div>
+  {{ end }}
 </nav>
+
+

@@ -1,0 +1,26 @@
+<section class = "work-experience">
+    <div class = "contain">
+        {{ range .Params.work.list }}
+        <ul class = "clearfix">
+            <li>
+                <div class = "company">
+                    {{.company}}
+                </div>
+                <div class = "date">
+                    {{.date}}
+                </div>
+            </li>
+            <li>
+                <div class = "title">
+                    {{.title}}
+                </div>
+                <div class = "link">
+                    <a href = "" >
+                        {{.link}}
+                    </a>
+                </div>
+            </li>
+        </ul>
+        {{end}}
+    </div>
+</section>

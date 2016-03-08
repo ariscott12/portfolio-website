@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "header.html" . }}
+    </head>
+    <body>
+        <div class="m-scene" id = "main">
+          <header>
+              {{ partial "navigation.html" . }}
+          </header>
+        
+          <div class="m-right-panel m-page scene_element scene_element--fadeinright">
+              <main class = "clearfix">
+                  {{ partial "project-grid.html" . }}
+              </main>
+          </div>
+          {{ partial "footer.html" . }}
+        </div>
+    </body>
+</html>

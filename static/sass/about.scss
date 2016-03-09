@@ -1,25 +1,78 @@
+.bio-pic {
+	background:$black-medium;
+	padding-bottom: 2rem;
+}
+.bio-pic-img {
+	@include circle(340px);
+    overflow: hidden;
+    margin: 0 auto;
+    border:15px solid $black-medium;
+    position:relative;
+    top:100px;
+
+    img {
+    	position: relative;
+    	left: -40px;
+
+    }
+}
+
 .about-intro {
-	height:400px;
-	background:#ccc;
+	background:$white-medium;
+	padding: 8em 0 6em 0;
+
+	p {
+		text-align: center;
+		font-size: 3.25rem;
+		color:$font-color-gray;
+		width:16em;
+		margin:0 auto;
+	}
+	@include break-at(860) {
+		p {
+			font-size: 2.5rem;
+			width:80%;
+		}
+	}
+	@include break-at(600) {
+		p {
+			font-size: 2rem;
+		}
+	}
 }
 .about-me {
 	background:$mb-turquoise;
-	color:#fff;
+	color:$font-color-white;
 	p {
 		font-size:1.5rem;
-		padding:6rem 0;
+		padding:4.25em 0;
 		color:$font-color-white;
 		margin-bottom:0;
+		text-align: center;
+		width:70%;
+		margin: 0 auto;
 	}
-	
+	@include break-at(860) {
+		p {
+			font-size: 1.25rem;
+			width:80%;
+		}
+	}
+	@include break-at(600) {
+		p {
+			font-size: 1.15rem;
+			width:90%;
+		}
+	}
 }
+
 .work-experience {
 	color: $font-color-gray;
-	background: #fff;
+	background: $white-medium;
 	padding:4rem 0;
 	li:first-child {
 		@include span-columns(5);
-		border-right:1px solid #eee;
+		border-right:1px solid #dbdbdb;
 	}
 	li:last-child {
 		@include span-columns(7);
@@ -36,19 +89,20 @@
     	line-height: 34px;
     	
 	}
-	.date {
-		//text-transform:uppercase;
-	}
 	ul {
 		padding:20px 0;
-		border-bottom:1px solid #e8e8e8;
-
+		border-bottom:1px solid #dbdbdb;
 		&:last-child {
 			border-bottom:none;
 		}
-		
 	}
 	a {
 		color:$mb-turquoise;
+	}
+	@include break-at(600) {
+		li:first-child, li:last-child {
+			@include span-columns(12);
+			border-right:none;
+		}
 	}
 }

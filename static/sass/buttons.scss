@@ -1,0 +1,50 @@
+.button-project {
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 4.5em;
+    padding: .6em .9em .4em .9em;
+    @include transition (all .2s ease-out);
+    color:$font-color-white;
+}
+
+.mile-high-classics {
+	.button-project {
+		background: $mhc-turquoise;
+		&:hover {
+			background:rgba($mhc-turquoise, .75);
+			
+		}
+	}
+}
+
+.hands4building {
+	.button-project {
+		background: $h4b-blue-dark;
+		&:hover {
+			background:rgba($h4b-blue-dark, .75);
+			
+		}
+	}
+}
+
+.music-blocks {
+	.button-project {
+		background: #2d4049;
+		:hover {
+			background:rgba(#2d4049, .75);
+			
+		}
+	}
+}
+
+.david-fodel {
+	.button-project {
+		background: $df-blue-light;
+		&:hover {
+			background:rgba($df-blue-light, .75);
+			
+		}
+	}
+}
+
+

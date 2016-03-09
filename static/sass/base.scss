@@ -1,26 +1,27 @@
 body {
     font-size: 100%;
-   	// font-family: 'Roboto Slab', serif;
-   	//font-family: 'Raleway', sans-serif;
-    //font-family: 'Titillium Web', sans-serif;
-    //font-family: 'Cabin', sans-serif;
     font-family: 'Hind', sans-serif;
-    font-weight: normal;
+    font-weight: $font-weight-normal;
     background:#ddd;
+}
 
-    @include break-at(800) {
-    	font-size: 80%;
-    }
+.page-wrapper {
+    overflow:hidden;
 }
 
 .contain {
 	@include outer-container();
-
 	@include break-at(1180) {
 		padding:0 24px;
 	}
 }
 
 li {
-	list-style-type:none;
+    list-style-type: none;
 }
+
+a {
+    color:inherit;;
+}   
+
+

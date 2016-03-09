@@ -1,30 +1,32 @@
+/*** Styles for Project page banners ***/
 .banner {
 	color:$font-color-white;
 	text-align:center;
 	height:646px;
-	padding-top:80px;
+	padding-top:5em;
 	h1, .h1 {
 		text-transform: uppercase;
 		font-size:4rem;
-		margin-bottom: 2.25rem;
+		margin-bottom: .5em;
 		letter-spacing: .1rem;
+		line-height:1.15em;
 	}
 	h2,.h2 {
-		font-weight: 400;
+		font-weight: $font-weight-normal;
     	font-style: italic;
     	font-size: 1.35rem;
-		margin-bottom:6.25rem;
+		margin-bottom:1.5em;
 	}
 	.color-pallette {
 		.circle {
-			@include circle(51px);
+			@include circle(3.25rem);
 			display:inline-block;
-			margin-right:2rem;
+			margin-right:.25em;
 			@include box-shadow(1px, 2px, 3px, rgba(0, 0, 0, 0.3));
 			@include transition(all .25s ease-in);
 			cursor:pointer;
 
-			span {
+			.hex-color {
 				text-transform: uppercase;
 				position:absolute;
 				left:-23%;
@@ -38,7 +40,7 @@
 			}
 			&:hover {
 				@include transform(translateY(10%));
-				span {
+				.hex-color {
 					opacity:1;
 					top:125%;
 				}
@@ -49,7 +51,6 @@
 		height:546px;
 		h1, .h1 {
 			font-size:3rem;
-			line-height: 48px;
 		}
 		h2, .h2 {
 			font-size: 1.25rem;
@@ -60,21 +61,27 @@
 		padding-bottom:90px;
 		h1, .h1 {
 			font-size:2.5rem;
-			line-height: 40px;
 		}
 		h2, .h2 {
 			font-size: 1.15rem;
-			margin-bottom:4.25rem;
 		}
 		.color-pallette {
 			.circle {
-				@include circle(31px);
-				margin-right:1rem;
+				@include circle(2.75rem);
 			}
+		}
+	}
+	@include break-at(500) {
+		.color-pallette {
+			display:none
+		}
+		.button-project {
+			margin-bottom: 0;
 		}
 	}
 }
 
+/*** Page specific banner styles ***/
 .hands4building {
 	.banner {
 		@include cover-background('../img/banner-imgs/banner-hands-4-building.jpg');
@@ -85,7 +92,6 @@
 		li:nth-child(2) {
 			background:$h4b-blue-dark;
 			border:1px solid darken($h4b-blue-dark, 6% );
-
 		}
 		li:nth-child(3) {
 			background:$h4b-orange;
@@ -205,8 +211,5 @@
 			background:$df-black-medium;
 			border:1px solid darken($df-black-medium, 6% );
 		}
-		// h2 {
-		// 	color: #3b4866;
-		// }
 	}
 }

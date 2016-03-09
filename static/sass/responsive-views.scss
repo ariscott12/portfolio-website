@@ -11,11 +11,9 @@
 	}
 	.slideshow-inner {
     	position: relative;
-    	width:300%;
     	left: 0%;
     	img {
 			float:left;
-			width:33%;
 		}
 	}
 	@include break-at(800) {
@@ -39,8 +37,7 @@
 		color:$font-color-white;
 		font-size: 2.25rem;
     	margin-bottom: 1.5rem;
-    	font-weight: 300;
-
+    	font-weight: $font-weight-normal;
 	}
 	.pagers {
 		li {
@@ -48,6 +45,7 @@
 			display:inline-block;
 			cursor:pointer;
 			margin-right:.5rem;
+			cursor:pointer;
 		}
 	}
 
@@ -127,8 +125,12 @@
 		&:after, &:before { 
 			background:$df-blue-light;
 		}
-	.pagers li {
+		.pagers li {
 			background: darken($df-blue-light, 6% );
+
+			&.selected {
+				background: lighten($df-blue-light, 20% );		
+			}
 		}
 	}
 }

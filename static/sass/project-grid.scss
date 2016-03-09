@@ -7,11 +7,11 @@
 		text-align: center;
 		overflow:hidden;
 		position:relative;
+		cursor:pointer;
 		@include transition(all .2s ease-in);
 		img {
 			@include transition(all .2s ease-in);
 		}
-
 		&:hover {
 			h3 {
 				opacity:1;
@@ -26,18 +26,19 @@
 	h3 {
 		@include transition(all .2s ease-in);
 		color: $font-color-white;
-		width: 200px;
+		width: 10em;
 		@include center-absolute();
 		@include vertical-align();
 		position: absolute;
 		background: rgba(0,0,0,.5);
 		border: 1px solid $font-color-white;
-		padding: 1em 0;
+		padding: 1em 0 .8em 0;
 		font-weight: 600;
-		font-size: 1.25rem;
+		font-size: 1.15rem;
 		opacity:0;
 		top:45%;
 		@include transform(scale(.7));
+		font-weight: normal;
 	}
 	
 	.mile-high-classics {
@@ -85,5 +86,32 @@
 		background:#999;
 		padding-top:2rem;
 	}
-
+	@include break-at(1380) {
+		.hands-4-building {
+			img {
+				left:-50%;
+			}
+		}
+	}
+	@include break-at(1120) {
+		a {
+			height:360px;
+		}
+		.project {
+			width:100%;
+		}
+		.hands-4-building {
+			img {
+				left:-4%;
+			}
+		}
+	}
+	@include break-at(600) {
+		a {
+			height:260px;
+		}
+		img {
+			width:100%;
+		}
+	}
 }

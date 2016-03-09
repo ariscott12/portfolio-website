@@ -5,6 +5,8 @@ title = "hands 4 building"
 id = "hands4building"
 projectrole = "Front-End Developer / Web Designer / Art Direction / UX"
 responsive = "true"
+external_link = "https://www.hands4building.com/"
+
 colors = [
 	"#0e84a0",
 	"#015367",

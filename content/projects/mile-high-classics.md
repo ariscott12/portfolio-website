@@ -5,6 +5,8 @@ title = "mile high classics"
 id = "mile-high-classics"
 projectrole = "Front-End Developer / Web Designer / Content Direction / UX"
 responsive = "true"
+external_link = "http://www.milehighclassics.com/"
+
 colors = [
   "#b60d08",
   "#db6f1d",
@@ -45,7 +47,7 @@ padding = "true"
 
 [[section.list]]
 class = "screenshots shadow"
-title = "Some Screenshots"
+title = "A Few Screenshots"
 img = "mile-high-classics/project-desktop.jpg"
 img2 = "mile-high-classics/services-desktop.jpg"
 padding = "true"

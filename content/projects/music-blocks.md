@@ -4,6 +4,7 @@ draft = true
 title = "Music Blocks"
 id = "music-blocks"
 projectrole = "JavaScript Developer / UI Designer / UX"
+external_link = "http://www.music-blocks.com/"
 responsive = "false"
 colors = [
 	"#45b29d",
@@ -17,15 +18,15 @@ colors = [
 [sections]
 
 	[[section.list]]
-	class="intro section-padding-perspective"
+	class="mb-intro section-padding-perspective"
 	img = "music-blocks/macbook-air.png"
-	description = "Music Blocks is a web based music sequencer built with HTML5 and MIDI.js.  Music Blocks is a web based music sequencer built with HTML5 and MIDI.js."
+	description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
 	padding = "false"
 
 	[[section.list]]
 	class = "grid-perspective section-padding-perspective screenshots"
 	title = "The Grid"
-	description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis"
+	description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
 	img = "music-blocks/grid-all.png"
 
 

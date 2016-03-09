@@ -5,6 +5,7 @@ title = "David Fodel"
 id = "david-fodel"
 projectrole = "Front-End Developer / Web Designer / Content Direction / UX"
 responsive = "true"
+external_link = "http://dave.westwardmotion.com/"
 
 colors = [
   "#181e2e",
@@ -36,7 +37,7 @@ responsiveimages = [
 	img2 = "david-fodel/homepage-perspective.png"
 
 	[[section.list]]
-	class = "screenshots"
+	class = "A few Screenshots"
 	title = "Some Screenshots"
 	img = "david-fodel/work-desktop.jpg"
 	img2 = "david-fodel/about-desktop.jpg"

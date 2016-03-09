@@ -4,7 +4,11 @@ draft = true
 title = "about"
 pagnation = "false"
 type = "about"
-info = "asdfasdf asdf"
+intro = "My name is Ari i'm a Front-End Developer and Web Designer"
+info = "Maecenas vitae commodo dolor, non ultricies purus. Proin dapibus nibh at aliquam bibendum. Proin sodales mauris tempus augue pretium, sit amet pharetra odio feugiat. Duis vel augue elit. Fusce vehicula convallis efficitur. Interdum et malesuada fames ac antes ipsum primis in faucibus. Aliquam erat volutpat. Proin placerat mi nec dui condimentum, non lobortis nunc dapibus."
+
+
+
 [sections]
 [[work.list]]
 title = "Designer/Front-end Developer"

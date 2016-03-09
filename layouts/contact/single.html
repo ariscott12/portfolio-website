@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "header.html" . }}
+    </head>
+    <body>
+        <div class="m-scene " id = "main">
+            <header>
+                {{ partial "navigation.html" . }}
+            </header>
+             <div class = "page-wrapper contact m-right-panel m-page scene_element scene_element--fadein" >
+                <main class = "clearfix">
+                  <section class = "get-in-touch">
+                      <h1>Need to get In Touch</h1>
+                      <p>Feel free to send me an email at <a href = "mailto:ariscott12@gmail.com">ariscott12@gmail.com</a></p>
+                  </section>
+                   <section class = "colorado-map">
+                        <p>Lives in Denver, CO</p>
+                  </section>
+                </main>
+                 {{ partial "footer.html" . }}
+            </div>
+        </div>
+    </body>
+</html>

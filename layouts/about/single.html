@@ -4,25 +4,33 @@
         {{ partial "header.html" . }}
     </head>
     <body>
-     <div class="m-scene" id = "main">
-        <header>
-            {{ partial "navigation.html" . }}
-        </header>
-        <div class="m-aside scene_element scene_element--fadein">
-            {{ partial "banner.html" . }}
-        </div>
-        <div class="m-right-panel m-page scene_element scene_element--fadeinright">
-            <main class = "clearfix">
-                <section class = "about-me">
-                    <div class = "contain">
+        <div class="m-scene" id = "main">
+            <header>
+                {{ partial "navigation.html" . }}
+            </header>
+            <div class="page-wrapper m-right-panel m-page scene_element scene_element--fadein">
+                <main>
+                    <section class = "bio-pic">
+                        <div class = "bio-pic-img">
+                            <img src = "/img/bio-pic-original.jpg" />
+                        </div>
+                    </section>
+                    <section class = "about-intro">
                         <p>
-                            {{ .Params.info }}
+                            {{ .Params.intro }}
                         </p>
-                    </div>
-                </section>
-               	{{ partial "experience.html" . }}
-            </main>
+                    </section>
+                    <section class = "about-me">
+                        <div class = "contain">
+                            <p>
+                                {{ .Params.info }}
+                            </p>
+                        </div>
+                    </section>
+                    {{ partial "experience.html" . }}
+                </main>
+                {{ partial "footer.html" . }}
+            </div>
         </div>
-      </div>
     </body>
 </html>

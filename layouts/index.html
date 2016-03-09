@@ -4,19 +4,15 @@
         {{ partial "header.html" . }}
     </head>
     <body>
-        <div class = "page-wrapper" >
-            <div class="m-scene" id = "main">
-                <header>
-                    {{ partial "navigation.html" . }}
-                </header>
-                <div class="m-aside scene_element scene_element--fadein">                  
-                       {{ partial "hero.html" . }}                   
-                </div>
-                <div class="m-right-panel m-page scene_element scene_element--fadeinright">
-                    <main class = "clearfix">
-                        {{ partial "project-grid.html" . }}   
-                    </main>
-                </div>
+        <div class="m-scene" id = "main">
+            <header>
+                {{ partial "navigation.html" . }}
+            </header>
+            <div class=" page-wrapper m-right-panel m-page scene_element scene_element--fadein">
+                {{ partial "video-banner.html" . }}
+                <main class = "clearfix">
+                    {{ partial "project-grid.html" . }}
+                </main>
                 {{ partial "footer.html" . }}
             </div>
         </div>

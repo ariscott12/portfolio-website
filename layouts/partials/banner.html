@@ -2,6 +2,7 @@
 	<div class = "contain">
 		<h1>{{title .Title }}</h1>
 		<h2>{{ .Params.projectrole }}</h2>
+		<a target = "_blank"  class = "button-project" href = "{{ .Params.external_link }}" >Visit Website</a>
 		<ul class = "color-pallette">
 			{{ range .Params.colors }}
 			<li  class = "circle  scene_element scene_element--changeMargin"><span class = "hex-color" >{{ . }}</span></li>

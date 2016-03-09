@@ -5,51 +5,47 @@
 	</head>
 	<body>
 		<div class="m-scene" id = "main">
-			<div class = "page-wrapper {{ .Params.id }}" >	
-	 			<header>
-					{{ partial "navigation.html" . }}
-				</header>
-				<div class="m-aside scene_element scene_element--fadein">
-					{{ partial "banner.html" . }}
-	 			</div>
-				<div class="m-right-panel m-page scene_element scene_element--fadeinright">
-					<main>
-						{{ range .Params.section.list }}
-							{{ if eq .padding "false" }}
-							<section class = "{{.class}}">
-							{{ else }}
-							<section class = "{{.class}} section-padding">
-							{{ end }}
-								<div class = "contain">
-									{{ if .title }}
-										<h3>{{.title | markdownify}}</h3>
-									{{end}}
-									{{ if .description }}
-										<p>{{.description | markdownify}}</p>
-									{{end}}
-									<div class = "img-wrapper clearfix">
-										{{ if .img }}
-											<img class = "img-first" src = "/img/{{ .img }}" />
-										{{end}}
-										{{ if .img2 }}
-											<img class = "img-second" src = "/img/{{ .img2 }}" />
-										{{end}}
-										{{ if .img3 }}
-											<img class = "img-third" src = "/img/{{ .img3 }}" />
-										{{end}}
-										{{ if .img4 }}
-											<img class = "img-fourth" src = "/img/{{ .img4 }}" />
-										{{end}}
-									</div>
-								</div>
-							</section>
-						{{end}}
-						{{ if eq .Params.responsive "true" }}
-							{{ partial "responsive-views.html" . }}
+ 			<header>
+				{{ partial "navigation.html" . }}
+			</header>
+			<div class = "page-wrapper m-right-panel m-page scene_element scene_element--fadein {{ .Params.id }}" >	
+ 				{{ partial "banner.html" . }}
+				<main>
+					{{ range .Params.section.list }}
+						{{ if eq .padding "false" }}
+						<section class = "{{.class}}">
+						{{ else }}
+						<section class = "{{.class}} section-padding">
 						{{ end }}
-					</main>
-				</div>
-			{{ partial "footer.html" . }}
+							<div class = "contain">
+								{{ if .title }}
+									<h3>{{.title | markdownify}}</h3>
+								{{end}}
+								{{ if .description }}
+									<p class = "description">{{.description | markdownify}}</p>
+								{{end}}
+								<div class = "img-wrapper clearfix">
+									{{ if .img }}
+										<img class = "img-first" src = "/img/{{ .img }}" />
+									{{end}}
+									{{ if .img2 }}
+										<img class = "img-second" src = "/img/{{ .img2 }}" />
+									{{end}}
+									{{ if .img3 }}
+										<img class = "img-third" src = "/img/{{ .img3 }}" />
+									{{end}}
+									{{ if .img4 }}
+										<img class = "img-fourth" src = "/img/{{ .img4 }}" />
+									{{end}}
+								</div>
+							</div>
+						</section>
+					{{end}}
+					{{ if eq .Params.responsive "true" }}
+						{{ partial "responsive-views.html" . }}
+					{{ end }}
+				</main>
+				{{ partial "footer.html" . }}
 			</div>
 		</div>
 	</body>

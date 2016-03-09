@@ -1,14 +1,19 @@
 <nav class = "navigation">
   <div class = "contain">
     <p class = "title"><a href = "/" >Ariel Scott</a></p>
-    <ul>
+    <ul class = "nav-links">
       {{ if .IsHome }}
           <li class = "work"><a href="/#work/">Work</a></li>
       {{ else }}
           <li><a href="/work/">Work</a></li>
       {{end}}
       <li><a href="/about/">About</a></li>
-      <li><a href="/#contact/">Contact</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+    <ul class = "hamburger">
+      <li></li>
+      <li></li>
+      <li></li>
     </ul>
   </div>
   {{ if eq .Type "projects" }}

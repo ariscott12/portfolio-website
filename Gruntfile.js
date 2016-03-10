@@ -12,27 +12,17 @@ module.exports = function(grunt) {
                 }
             }
         },
-        // browserify: {
-        //     client: {
-        //         src: ['static/js/mile-high-classics.js', 'static/js/main.js'],
-        //         dest: 'static/js/build/common.js',
-        //         options: {
-        //             transform: [
-        //                 ["babelify", {
-        //                     presets: ["es2015"]
-        //                 }]
-        //             ],
-        //             plugin: [
-        //                 ['factor-bundle', {
-        //                     outputs: ['static/js/build/mile-high-classics.js', 'static/js/build/main.js']
-        //                 }]
-        //             ],
-        //             browserifyOptions: {
-        //                 debug: true
-        //             },
-        //         }
-        //     }
-        // },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'static/css',
+                    src: ['*.css', '!*.min.css'],
+                    dest: 'static/css',
+                    ext: '.min.css'
+                }]
+            }
+        },
         browserify: {
             dist: {
                 options: {
@@ -50,14 +40,35 @@ module.exports = function(grunt) {
                 },
             }
         },
+        imagemin: {
+            png: {
+                options: {
+                    optimizationLevel: 1
+                },
+                files: [{
+                    // Set to true to enable the following options…
+                    expand: true,
+                    // cwd is 'current working directory'
+                    cwd: 'static/img/',
+                    src: ['**/**/*.png'],
+                    // Could also match cwd line above. i.e. project-directory/img/
+                    dest: 'static/img/compressed',
+                    ext: '.png'
+                }]
+            }
+        },
         watch: {
             sass: {
-                files: ["static/sass/*.scss"],
+                files: ['static/sass/*.scss'],
                 tasks: "sass"
             },
             browserify: {
-                files: ["static/js/*.js", "!static/js/build/*.js"],
-                tasks: "browserify"
+                files: ['static/js/*.js', '!static/js/build/*.js'],
+                tasks: 'browserify'
+            },
+            css: {
+                files: ['static/css/*.css', '!static/css/*.min.css'],
+                tasks: 'cssmin'
             }
         }
     });
@@ -65,6 +76,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-sass");
     grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     //Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask("default", ["watch"]);
+    grunt.registerTask('imagemin', ['imagemin']);
 };

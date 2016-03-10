@@ -3,7 +3,7 @@ const $ = require('jquery');
 const ScrollMagic = require('scrollmagic');
 const controller = new ScrollMagic.Controller();
 module.exports = {
-    addScrollScenes(obj, $container) {
+    addScrollScenes($container, obj ) {
         if ($container.find(obj).length) {
             $container.find(obj).each(function(index, elem) {
 

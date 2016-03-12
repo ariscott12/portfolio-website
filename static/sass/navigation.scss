@@ -39,6 +39,7 @@
 }
 
 .nav-links {
+	z-index: 100;
 	float:right;
 	li {
 		float:left;
@@ -47,6 +48,9 @@
 		    text-transform: uppercase;
 		    padding: 24px 18px 19px 18px;
 		    display:block;
+		    &:hover {
+		    	background:darken($font-color-white,6%);
+		    }
 		}
 	}
 }
@@ -67,8 +71,12 @@
 	a {
 		float:left;
 		padding: 1.25em 1.75em;
-		background:$font-color-white;
+		background:$white-medium;
 		border:1px solid #ccc;
+
+		&:hover {
+		    background:darken($font-color-white,6%);
+		}
 	}
 }
 
@@ -77,6 +85,7 @@
     position: absolute;
     right: 20px;
     top: 24px;
+    z-index:1000;
     li {
         background: $font-color-navigation;
         height: 4px;

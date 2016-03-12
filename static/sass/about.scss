@@ -37,31 +37,25 @@
 	@include break-at(600) {
 		p {
 			font-size: 2rem;
+			width:90%;
 		}
 	}
 }
 .about-me {
 	background:$mb-turquoise;
-	color:$font-color-white;
+	padding: 6rem 0 4rem 0;
 	p {
-		font-size:1.5rem;
-		padding:4.25em 0;
 		color:$font-color-white;
-		margin-bottom:0;
-		text-align: center;
-		width:70%;
-		margin: 0 auto;
+		margin-bottom:2.5em; 
 	}
+	h3 {
+		color:$font-color-white;
+		position:relative;
+	}
+	
 	@include break-at(860) {
 		p {
-			font-size: 1.25rem;
-			width:80%;
-		}
-	}
-	@include break-at(600) {
-		p {
-			font-size: 1.15rem;
-			width:90%;
+			font-size: 1rem;
 		}
 	}
 }
@@ -69,7 +63,10 @@
 .work-experience {
 	color: $font-color-gray;
 	background: $white-medium;
-	padding:4rem 0;
+	padding:6rem 0;
+	h3 {
+		text-align: left;
+	}
 	li:first-child {
 		@include span-columns(5);
 		border-right:1px solid #dbdbdb;

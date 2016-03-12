@@ -40,6 +40,15 @@ module.exports = function(grunt) {
                 },
             }
         },
+         uglify: {
+          options: {
+            banner: '/*! Grunt Uglify <%= grunt.template.today("yyyy-mm-dd") %> */ '
+          },
+          build: {
+            src: 'static/js/build/main.js',
+            dest: 'static/js/build/main.min.js'
+          }
+        },
         imagemin: {
             png: {
                 options: {
@@ -78,7 +87,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
     //Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask("default", ["watch"]);
     grunt.registerTask('imagemin', ['imagemin']);
+    grunt.registerTask('uglify', ['uglify']);
 };

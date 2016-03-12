@@ -1,9 +1,9 @@
 +++
 date = "2016-02-29T08:01:41-07:00"
-draft = true
+draft = false
 title = "hands 4 building"
 id = "hands4building"
-projectrole = "Front-End Developer / Web Designer / Art Direction / UX"
+projectrole = "Front-End Developer / Web Designer / Art Direction"
 responsive = "true"
 external_link = "https://www.hands4building.com/"
 
@@ -33,7 +33,7 @@ responsiveimages = [
 
 	[[section.list]]
 	class = "screenshots shadow"
-	title = "Some Screen Shots"
+	title = "A Few Screenshots"
 	img = "hands4building/projects-desktop.jpg"
 	img2 = "hands4building/process-desktop.jpg"
 	padding = "true"
@@ -41,7 +41,7 @@ responsiveimages = [
 	[[section.list]]
 	class = "shoppingcart screenshots"
 	title = "The Shopping Cart"
-	description = "A custom shopping cart was designed, developed, and themed using Drupal Commerce.  The cart allows users to access training videos once a package is purchased"
+	description = "A custom shopping cart was designed, developed, and themed using the Drupal CMS.  The cart allows users private access to training videos once a package is purchased."
 	img = "hands4building/shopping-cart-top.jpg"
 	img2 = "hands4building/shopping-cart-left.jpg"
 	img3 = "hands4building/shopping-cart-right.jpg"

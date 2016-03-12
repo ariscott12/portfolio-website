@@ -1,9 +1,9 @@
 +++
 date = "2016-02-29T08:01:41-07:00"
-draft = true
-title = "David Fodel"
+draft = false
+title = "David Fodel Portfolio"
 id = "david-fodel"
-projectrole = "Front-End Developer / Web Designer / Content Direction / UX"
+projectrole = "Front-End Developer / Web Designer "
 responsive = "true"
 external_link = "http://dave.westwardmotion.com/"
 
@@ -37,8 +37,8 @@ responsiveimages = [
 	img2 = "david-fodel/homepage-perspective.png"
 
 	[[section.list]]
-	class = "A few Screenshots"
-	title = "Some Screenshots"
+	class = "screenshots"
+	title = "A Few Screenshots"
 	img = "david-fodel/work-desktop.jpg"
 	img2 = "david-fodel/about-desktop.jpg"
 

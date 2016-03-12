@@ -1,12 +1,13 @@
 +++
 date = "2016-03-04T11:43:42-07:00"
-draft = true
+draft = false
 title = "about"
 pagnation = "false"
 type = "about"
-intro = "My name is Ari i'm a Front-End Developer and Web Designer"
-info = "Maecenas vitae commodo dolor, non ultricies purus. Proin dapibus nibh at aliquam bibendum. Proin sodales mauris tempus augue pretium, sit amet pharetra odio feugiat. Duis vel augue elit. Fusce vehicula convallis efficitur. Interdum et malesuada fames ac antes ipsum primis in faucibus. Aliquam erat volutpat. Proin placerat mi nec dui condimentum, non lobortis nunc dapibus."
+intro = "My name is Ari and I’m a Front-End Developer and Web Designer "
+info = "I love to design interactive and intuitive digital experiences and bring them to life through front-end coding. For  me this usually involves HTML5, CSS3, JavaScript, Jquery and front-end tools such as grunt and browserify. As a developer and designer I am always trying to improve my skills and stay up to date on current web design trends and web development best practices by experimenting with new frameworks and continually learning through blogs and tutorials."
 
+info2 = " When creating digital experiences I enjoy collaboration and feel that teamwork is the best way to solve complex problems. I am passionate about the work I do and put a lot of commitment to make sure the end product meets client expectations. "
 
 
 [sections]

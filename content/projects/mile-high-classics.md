@@ -1,9 +1,9 @@
 +++
 date = "2016-02-29T08:01:41-07:00"
-draft = true
+draft = false
 title = "mile high classics"
 id = "mile-high-classics"
-projectrole = "Front-End Developer / Web Designer / Content Direction / UX"
+projectrole = "Front-End Developer / Web Designer / Content Direction "
 responsive = "true"
 external_link = "http://www.milehighclassics.com/"
 

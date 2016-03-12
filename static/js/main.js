@@ -1,46 +1,55 @@
 const $ = require('jquery');
 const ScrollMagic = require('./scroll-magic.js');
 const smoothState = require('smoothstate');
+const Slider = require('./slider');
+const Navigation = require('./navigation.js');
 
 $(function() {
     'use strict';
-    $('.color-pallette').delay(500).queue(function(next) {
-        $(this).addClass('animate');
-        next();
-    });
-    ScrollMagic.addScrollScenes($('.page-wrapper'),'.screenshots img');
-    ScrollMagic.addScrollScenes($('.page-wrapper'),'.hover-effects .img-wrapper');
+    const $body = $('html, body');
+    const $wrapper = $('.page-wrapper');
+    const $main = $('#main');
 
-    var options = {
+    ScrollMagic.addScrollScenes($wrapper,'.screenshots img');
+    ScrollMagic.addScrollScenes($wrapper,'.hover-effects .img-wrapper');
+    ScrollMagic.addScrollScenes($wrapper,'.lofi-hifi .img-wrapper');
+    Slider.addSlider($wrapper);
+    Navigation.fixedNav();
+    Navigation.navClickEvents($main);
+
+    const options = {
             prefetch: true,
             pageCacheSize: 2,
             onStart: {
-                duration: 250, // Duration of our animation 
+                duration: 300, // Duration of our animation 
                 render: function($container) {
+
                     // Add your CSS animation reversing class 
                     $container.addClass('is-exiting');
                     // Restart your animation 
                     smoothState.restartCSSAnimations();
-                    $container.find('.color-pallette').delay(500).queue(function(next) {
-                        $(this).addClass('animate');
-                        next();
-                    });
                 }
             },
             onReady: {
                 duration: 0,
                 render: function($container, $newContent) {
-                    $newContent.find('.color-pallette').delay(100).queue(function(next) {
-                        $(this).addClass('animate');
-                        next();
-                    });
-                    ScrollMagic.addScrollScenes($newContent,'.screenshots img');
-                    ScrollMagic.addScrollScenes($newContent,'.hover-effects');
+
+                     $body.animate({
+                        scrollTop: 0
+                    },0);
 
                     // Remove your CSS animation reversing class 
                     $container.removeClass('is-exiting');
                     // Inject the new content 
-                    $container.html($newContent);
+                    $container.html($newContent);  
+                   
+                    ScrollMagic.addScrollScenes($newContent,'.screenshots img');
+                    ScrollMagic.addScrollScenes($newContent,'.hover-effects .img-wrapper');
+                    ScrollMagic.addScrollScenes($newContent,'.lofi-hifi .img-wrapper');
+                    Slider.addSlider($newContent);
+                    Navigation.fixedNav(); 
+                    Navigation.navClickEvents($newContent);
+
                 }
             }
         },

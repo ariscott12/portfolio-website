@@ -6,4 +6,5 @@ Fully responsive multipage portfolio built with HUGO a static website generator.
 
 ### Built With
 [Hugo](https://github.com/miguel-perez/smoothState.js)
+
 [Smoothstate.js](https://github.com/miguel-perez/smoothState.js)

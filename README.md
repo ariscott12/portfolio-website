@@ -4,4 +4,6 @@ Fully responsive multipage portfolio built with HUGO a static website generator.
 ## View the Website
 [arielscott.com](http://www.arielscott.com/)
 
-
+### Built With
+[Hugo](https://github.com/miguel-perez/smoothState.js)
+[Smoothstate.js](https://github.com/miguel-perez/smoothState.js)
